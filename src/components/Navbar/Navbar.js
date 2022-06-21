@@ -1,6 +1,5 @@
 import React, { useState } from 'react'
 import { HiMenuAlt4, HiX } from "react-icons/hi"
-import { motion } from 'framer-motion'
 import { images } from '../../constants'
 // styles
 import "./style.scss"
@@ -25,13 +24,8 @@ const Navbar = () => {
                 })}
             </ul>
             <div className="app_navbar-menu">
-                <HiMenuAlt4 onClick={() => { setToggle(true) }} />
-                {
-                    toggle && (
-                        <motion.div
-                            whileInView={{ x: [300, 0] }}
-                            transition={{ duration: 0.85, ease: "easeOut" }}
-                        >
+                <HiMenuAlt4 onClick={() => { setToggle(!toggle) }} />
+                        <div className= {`sidebar ${toggle? "active": "" }`}>
                             <HiX onClick={() => { setToggle(false) }} />
                             <ul>
                                 {NavLists.map((item) => {
@@ -42,9 +36,8 @@ const Navbar = () => {
                                     )
                                 })}
                             </ul>
-                        </motion.div>
-                    )
-                }
+                        </div>
+           
 
             </div>
         </nav>
