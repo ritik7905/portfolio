@@ -1,0 +1,17 @@
+@import "../../styles/variables/color";
+#work {
+    background-color: aliceblue;
+}
+
+.app__work-filter {
+    .app__work-filter-item {
+        padding: 10px 20px;
+        border-radius: 10px;
+    }
+}
+
+.item-active {
+    background-color: $secondary-color;
+    transition: all 0.5s;
+    color: $white-color;
+}

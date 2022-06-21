@@ -1,6 +1,8 @@
 import React from 'react'
 import { motion } from "framer-motion"
 import { images } from '../../constants'
+
+import { AppWrap } from '../../wrapper'
 // styles
 import "./style.scss"
 
@@ -43,12 +45,10 @@ const Header = () => {
                 className="app__header-img"
             >
                 <img src={images.profile} alt="Profile_image.." />
-
                 <motion.img whileInView={{ scale: [0, 1] }}
                     transition={{ duration: 1, ease: "easeInOut" }}
                     src={images.circle}
                     className="overlay_circle" />
-
             </motion.div>
             <motion.div
                 variants={scaleVariants}
@@ -69,4 +69,4 @@ const Header = () => {
     )
 }
 
-export default Header
+export default AppWrap(Header, 'home')
