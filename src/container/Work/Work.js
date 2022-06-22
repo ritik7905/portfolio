@@ -1,92 +1,235 @@
-import React, { useState, useEffect } from 'react'
+import React, { useState } from 'react'
 import { AiFillEye, AiFillGithub } from "react-icons/ai"
-import { motion } from 'framer-motion'
 import { AppWrap } from "../../wrapper"
 // styles
 import "./style.scss"
 import { images } from '../../constants'
+import { Tabs } from 'antd';
+const { TabPane } = Tabs;
 
 const Work = () => {
-
   const work = [
     {
-      imgUrl: images.about01,
-      title: "Frontend Development",
-      description: "I am a good developer.",
-      ProjectLink: ""
-    },
-    {
-      imgUrl: images.about02,
-      title: "Web Designer",
-      description: "I am a good designer.",
-      ProjectLink: ""
-    },
-    {
-      imgUrl: images.about03,
-      title: "UI/UX",
-      description: "I am a good in UI/UX.",
-      ProjectLink: ""
-    },
-    {
-      imgUrl: images.about04,
-      title: "Web Animation",
-      description: "I am a good in web-animation.",
-      ProjectLink: ""
-    },
+      ALL: [
+        {
+          imgUrl: images.about01,
+          title: "Frontend Development",
+          description: "I am a good developer.",
+          ProjectLink: "",
+          codeLink: "",
+          tags: ["Agency Website",]
+        },
+        {
+          imgUrl: images.about02,
+          title: "Web Designer",
+          description: "I am a good designer.",
+          ProjectLink: "",
+          codeLink: ""
+        },
+        {
+          imgUrl: images.about03,
+          title: "UI/UX",
+          description: "I am a good in UI/UX.",
+          ProjectLink: "",
+          codeLink: ""
+        },
+        {
+          imgUrl: images.about04,
+          title: "Web Animation",
+          description: "I am a good in web-animation.",
+          ProjectLink: "",
+          codeLink: ""
+        },
+      ],
+      React_Js: [
+        {
+          imgUrl: images.about03,
+          title: "UI/UX",
+          description: "I am a good in UI/UX.",
+          ProjectLink: "",
+          codeLink: ""
+        },
+        {
+          imgUrl: images.about04,
+          title: "Web Animation",
+          description: "I am a good in web-animation.",
+          ProjectLink: "",
+          codeLink: ""
+        },
 
+      ],
+      JavaScript: [
+        {
+          imgUrl: images.about03,
+          title: "UI/UX",
+          description: "I am a good in UI/UX.",
+          ProjectLink: "",
+          codeLink: ""
+        },
+        {
+          imgUrl: images.about04,
+          title: "Web Animation",
+          description: "I am a good in web-animation.",
+          ProjectLink: "",
+          codeLink: ""
+        },
+
+      ],
+      HTML_CSS: [
+        {
+          imgUrl: images.about03,
+          title: "UI/UX",
+          description: "I am a good in UI/UX.",
+          ProjectLink: "",
+          codeLink: ""
+        },
+        {
+          imgUrl: images.about04,
+          title: "Web Animation",
+          description: "I am a good in web-animation.",
+          ProjectLink: "",
+          codeLink: ""
+        },
+      ],
+    }
   ]
-
-  console.log(work);
+  console.log(work[0].ALL);
   const [activeFiilter, setActiveFilter] = useState("All")
-  const [animateCard, setAnimateCard] = useState({ y: 0, opacity: 1 })
-  const handleWorkFilter = (work) => {
-    setActiveFilter(work)
-
-  }
   return (
     <>
       <h2 className='head-text'> My Creative<span> Portfolio</span> Section</h2>
-      <div className="app__work-filter app__flex">
-        {['HTML/CSS', 'React JS', 'Javascript', 'Web Design', 'All'].reverse().map((work, index) => {
-          return (
-            <>
-              <div key={index} style={{ margin: 20, cursor: "pointer" }}
-                className={`app__work-filter-item app__flex p-text ${activeFiilter === work ? 'item-active' : ''}`}
-                onClick={() => { handleWorkFilter(work) }}>{work}</div>
-            </>
-          )
-        })}
-      </div>
-
-      <motion.div
-        animate={animateCard}
-        transition={{ duration: 0.5, delayChildren: 0.5 }}
-        className="app__work-portfolio"
-      >
-        {work.map((item) => {
-          <div className="app__work-item app__flex">
-            <div className="app__work-img app__flex">
-              <img src={item.imgUrl} alt="Work__image.." />
-              <p>{item.title}</p>
-              <motion.div
-                whileHover={{ opacity: [0, 1] }}
-                transition={{ duration: 0.25, ease: "easeInOut", delayChildren: 0 }}
-              >
-                <a href={item.ProjectLink} target="_blank">
-                  <motion.div
-                    whileInView={{ scale: [0, 1] }}
-                    whileHover={{ scale: [0, 0.9] }}
-                    transition={{ duration: 0.25 }}
-                  >
-                  </motion.div>
-                </a>
-              </motion.div>
-            </div>
+      <Tabs defaultActiveKey="1" centered className='app__portfolio-filters'>
+        <TabPane tab="All" key="1">
+          <div className="app__work-portfolio">
+            {work[0].ALL.map((works, index) => {
+              return (
+                <div className="app__work-item app__flex" key={index}>
+                  <div className="app__work-img app__flex">
+                    <img src={works.imgUrl} alt="Work__image.." />
+                    <div className="app__work-overlay">
+                      <div className="app__work-links app__flex">
+                        <a href={works.ProjectLink} target="_blank" rel="noreferrer">
+                          <div className="app__work-hover app__flex">
+                            <AiFillEye />
+                          </div>
+                        </a>
+                        <a href={works.codeLink} target="_blank" rel="noreferrer">
+                          <div className="app__work-hover app__flex">
+                            <AiFillGithub />
+                          </div>
+                        </a>
+                      </div>
+                    </div>
+                  </div>
+                  <div className="app__work-content app__flex">
+                    <h4 className='bold-text text'>{works.title}</h4>
+                    <p className="p-text text">{works.description}</p>
+                  </div>
+                </div>
+              )
+            })}
           </div>
-        })}
-      </motion.div>
+        </TabPane>
+        <TabPane tab="React JS" key="2">
+          <div className="app__work-portfolio">
+            {work[0].React_Js.map((works, index) => {
+              return (
+                <div className="app__work-item app__flex" key={index}>
+                  <div className="app__work-img app__flex">
+                    <img src={works.imgUrl} alt="Work__image.." />
+                    <div className="app__work-overlay">
+                      <div className="app__work-links app__flex">
+                        <a href={works.ProjectLink} target="_blank" rel="noreferrer">
+                          <div className="app__work-hover app__flex">
+                            <AiFillEye />
+                          </div>
+                        </a>
+                        <a href={works.codeLink} target="_blank" rel="noreferrer">
+                          <div className="app__work-hover app__flex">
+                            <AiFillGithub />
+                          </div>
+                        </a>
+                      </div>
+                    </div>
+                  </div>
+                  <div className="app__work-content app__flex">
+                    <h4 className='bold-text text'>{works.title}</h4>
+                    <p className="p-text text">{works.description}</p>
+                  </div>
+                </div>
+              )
+            })}
+          </div>
+        </TabPane>
+        <TabPane tab="Javascript" key="3">
+          <div className="app__work-portfolio">
+            {work[0].JavaScript.map((works, index) => {
+              return (
+                <div className="app__work-item app__flex" key={index}>
+                  <div className="app__work-img app__flex">
+                    <img src={works.imgUrl} alt="Work__image.." />
+                    <div className="app__work-overlay">
+                      <div className="app__work-links app__flex">
+                        <a href={works.ProjectLink} target="_blank" rel="noreferrer">
+                          <div className="app__work-hover app__flex">
+                            <AiFillEye />
+                          </div>
+                        </a>
+                        <a href={works.codeLink} target="_blank" rel="noreferrer">
+                          <div className="app__work-hover app__flex">
+                            <AiFillGithub />
+                          </div>
+                        </a>
+                      </div>
+                    </div>
+                  </div>
+                  <div className="app__work-content app__flex">
+                    <h4 className='bold-text text'>{works.title}</h4>
+                    <p className="p-text text">{works.description}</p>
+                  </div>
+                </div>
+              )
+            })}
+          </div>
+        </TabPane>
+        <TabPane tab="HTML/CSS" key="5">
+          <div className="app__work-portfolio">
+            {work[0].HTML_CSS.map((works, index) => {
+              return (
+                <div className="app__work-item app__flex" key={index}>
+                  <div className="app__work-img app__flex">
+                    <img src={works.imgUrl} alt="Work__image.." />
+                    <div className="app__work-overlay">
+                      <div className="app__work-links app__flex">
+                        <a href={works.ProjectLink} target="_blank" rel="noreferrer">
+                          <div className="app__work-hover app__flex">
+                            <AiFillEye />
+                          </div>
+                        </a>
+                        <a href={works.codeLink} target="_blank" rel="noreferrer">
+                          <div className="app__work-hover app__flex">
+                            <AiFillGithub />
+                          </div>
+                        </a>
+                      </div>
+                    </div>
+                  </div>
+                  <div className="app__work-content app__flex">
+                    <h4 className='bold-text text'>{works.title}</h4>
+                    <p className="p-text text">{works.description}</p>
+                  </div>
+                </div>
+              )
+            })}
+          </div>
+        </TabPane>
+      </Tabs>
     </>
   )
 }
 
-export default AppWrap(Work, 'Work')
+export default AppWrap(Work, 'work')
+
+
+
+

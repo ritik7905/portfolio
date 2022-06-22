@@ -1,17 +1,106 @@
 @import "../../styles/variables/color";
+@import "../../styles/variables/mixins";
 #work {
     background-color: aliceblue;
 }
 
-.app__work-filter {
-    .app__work-filter-item {
-        padding: 10px 20px;
-        border-radius: 10px;
+.app__portfolio-filters {
+    width: 80%;
+    min-height: 100%;
+    .ant-tabs-nav::before {
+        display: none;
+    }
+    .ant-tabs-tab {
+        font-size: 15px;
+        font-weight: 100;
+        &:hover {
+            color: $secondary-color;
+        }
+    }
+    .ant-tabs-tab-btn {
+        color: #97a0ae;
+    }
+    .ant-tabs-tab-active {
+        background-color: $secondary-color;
+        border-radius: 12px;
+        width: 100%;
+        padding: 10px;
+        .ant-tabs-ink-bar {
+            border-bottom: 1px solid red;
+        }
+        .ant-tabs-tab-btn {
+            color: white !important;
+        }
     }
 }
 
-.item-active {
-    background-color: $secondary-color;
-    transition: all 0.5s;
-    color: $white-color;
+.app__work-portfolio {
+    display: flex;
+    width: 100%;
+    justify-content: center;
+    flex-wrap: wrap;
+    position: relative;
+    .app__work-item {
+        flex-direction: column;
+    }
+}
+
+.app__work-img {
+    position: relative;
+    overflow: hidden;
+    width: 170px;
+    flex-direction: column;
+    margin: 20px;
+    cursor: pointer;
+    @include desktop-lg {
+        width: 370px;
+    }
+    img {
+        border-radius: 15px;
+        width: 100%;
+    }
+    .app__work-overlay {
+        width: 100%;
+        opacity: 0;
+        height: 100%;
+        background-color: gray;
+        position: absolute;
+        border-radius: 15px;
+        backdrop-filter: blur(4px);
+        -webkit-backdrop-filter: blur(5px);
+        transition: all 0.5s;
+        svg {
+            color: black;
+            width: 50%;
+            height: 50%;
+            font-size: 50px;
+            transition: all 0.2s;
+            &:hover {
+                transform: scale(1.5);
+                background-color: $white-color;
+                border-radius: 50%;
+                padding: 8px;
+            }
+        }
+        .app__work-links {
+            justify-content: space-around;
+            align-items: center;
+            width: 100%;
+            height: 100%;
+        }
+    }
+    &:hover {
+        .app__work-overlay {
+            transition: all 0.5s ease-in-out;
+            height: 100%;
+            opacity: 0.8;
+        }
+    }
+}
+
+.app__work-content {
+    flex-direction: column;
+    .text {
+        margin: 5px;
+    }
 }

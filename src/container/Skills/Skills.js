@@ -5,4 +5,4 @@ const Skills = () => {
   return <div> Skils </div>
 }
 
-export default AppWrap(Skills, 'Skills')
+export default AppWrap(Skills, 'skills')
