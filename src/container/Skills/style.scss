@@ -1,0 +1,36 @@
+@import "../../styles/variables/mixins";
+.app__skills {
+    flex: 1;
+    width: 100%;
+    flex-direction: column;
+}
+
+.app__skills-container {
+    width: 80%;
+    margin: 0 auto;
+    .app__skill-lists {
+        display: flex;
+        justify-content: center;
+        flex-wrap: wrap;
+    }
+    .app__skills-item {
+        flex-direction: column;
+        cursor: pointer;
+        .p-text {
+            margin: 0;
+            font-size: 18px;
+            font-weight: 500;
+        }
+        .app__skills-icons {
+            width: 170px;
+            height: 170px;
+            img {
+                width: 100%;
+            }
+            @include desktop-lg {
+                width: 270px;
+                height: 270px;
+            }
+        }
+    }
+}

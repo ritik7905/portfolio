@@ -1,6 +1,5 @@
 import React, { useState } from 'react'
 import { AiFillEye, AiFillGithub } from "react-icons/ai"
-import { AppWrap } from "../../wrapper"
 // styles
 import "./style.scss"
 import { images } from '../../constants'
@@ -94,7 +93,6 @@ const Work = () => {
     }
   ]
   console.log(work[0].ALL);
-  const [activeFiilter, setActiveFilter] = useState("All")
   return (
     <>
       <h2 className='head-text'> My Creative<span> Portfolio</span> Section</h2>
@@ -228,7 +226,7 @@ const Work = () => {
   )
 }
 
-export default AppWrap(Work, 'work')
+export default Work
 
 
 

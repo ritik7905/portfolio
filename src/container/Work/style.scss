@@ -4,9 +4,11 @@
     background-color: aliceblue;
 }
 
+.head-text {
+    padding: 50px 0;
+}
+
 .app__portfolio-filters {
-    width: 80%;
-    min-height: 100%;
     .ant-tabs-nav::before {
         display: none;
     }
@@ -35,8 +37,11 @@
 }
 
 .app__work-portfolio {
+    width: 80%;
+    margin: 0 auto;
     display: flex;
-    width: 100%;
+    min-height: 100vh;
+    // background-color: aqua;
     justify-content: center;
     flex-wrap: wrap;
     position: relative;
