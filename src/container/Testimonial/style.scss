@@ -1,14 +1,18 @@
-.app__testimonials {}
+.app__testimonials {
+    display: flex;
+    flex-direction: column;
+    padding: 90px 0;
+}
 
 .app__testimonial-content {
     width: 50%;
     margin: 0 auto;
     border-radius: 10px;
     overflow: hidden;
+    box-shadow: 0 5px 32px rgba(0, 0, 0, 0.1);
     .swiper {
         height: 500px;
         background-color: aliceblue;
-        box-shadow: 0 0 20px rgb(0 0 0 / 10%);
     }
     .swiper-slide {
         display: flex;
