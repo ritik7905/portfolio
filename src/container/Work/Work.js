@@ -1,4 +1,4 @@
-import React, { useState } from 'react'
+import React from 'react'
 import { AiFillEye, AiFillGithub } from "react-icons/ai"
 // styles
 import "./style.scss"
@@ -9,88 +9,86 @@ const { TabPane } = Tabs;
 const Work = () => {
   const work = [
 
-    
+
     {
       ALL: [
         {
-          imgUrl: images.about01,
-          title: "Frontend Development",
+          imgUrl: images.agency,
+          title: "Agency",
           description: "I am a good developer.",
-          ProjectLink: "",
-          codeLink: "",
-          tags: ["Agency Website",]
+          ProjectLink: "https://heroagency.netlify.app/",
+          codeLink: "https://github.com/ritik7905/firstWeb",
         },
         {
-          imgUrl: images.about02,
-          title: "Web Designer",
-          description: "I am a good designer.",
-          ProjectLink: "",
-          codeLink: ""
+          imgUrl: images.auth_crud,
+          title: "AUTH & CRUD",
+          description: "I am a good developer.",
+          ProjectLink: "https://ononeclick-85d25.web.app/login",
+          codeLink: "https://github.com/ritik7905/onOneClick",
         },
         {
-          imgUrl: images.about03,
-          title: "UI/UX",
+          imgUrl: images.toddler,
+          title: "Kids Toddler",
           description: "I am a good in UI/UX.",
-          ProjectLink: "",
+          ProjectLink: "https://kidstoddler.netlify.app",
           codeLink: ""
         },
         {
-          imgUrl: images.about04,
-          title: "Web Animation",
+          imgUrl: images.calculator,
+          title: "Tip Calculator",
           description: "I am a good in web-animation.",
-          ProjectLink: "",
-          codeLink: ""
+          ProjectLink: "https://ritik7905.github.io/tip_calculator/",
+          codeLink: "https://github.com/ritik7905/tip_calculator/tree/master"
         },
+        {
+          imgUrl: images.CRUD,
+          title: "Employee CRUD",
+          description: "I am a good in web-animation.",
+          ProjectLink: "https://ritik7905.github.io/Employee_crud/",
+          codeLink: "https://github.com/ritik7905/Employee_crud"
+        },
+
       ],
       React_Js: [
         {
-          imgUrl: images.about03,
-          title: "UI/UX",
-          description: "I am a good in UI/UX.",
-          ProjectLink: "",
-          codeLink: ""
+          imgUrl: images.agency,
+          title: "Agency",
+          description: "I am a good developer.",
+          ProjectLink: "https://heroagency.netlify.app/",
+          codeLink: "https://github.com/ritik7905/firstWeb",
         },
         {
-          imgUrl: images.about04,
-          title: "Web Animation",
-          description: "I am a good in web-animation.",
-          ProjectLink: "",
-          codeLink: ""
+          imgUrl: images.auth_crud,
+          title: "AUTH & CRUD",
+          description: "I am a good developer.",
+          ProjectLink: "https://ononeclick-85d25.web.app/login",
+          codeLink: "https://github.com/ritik7905/onOneClick",
         },
 
       ],
       JavaScript: [
         {
-          imgUrl: images.about03,
-          title: "UI/UX",
+          imgUrl: images.toddler,
+          title: "Kids Toddler",
           description: "I am a good in UI/UX.",
-          ProjectLink: "",
+          ProjectLink: "https://kidstoddler.netlify.app",
           codeLink: ""
         },
         {
-          imgUrl: images.about04,
-          title: "Web Animation",
+          imgUrl: images.calculator,
+          title: "Tip Calculator",
           description: "I am a good in web-animation.",
-          ProjectLink: "",
-          codeLink: ""
+          ProjectLink: "https://ritik7905.github.io/tip_calculator/",
+          codeLink: "https://github.com/ritik7905/tip_calculator/tree/master"
+        },
+        {
+          imgUrl: images.CRUD,
+          title: "Employee CRUD",
+          description: "I am a good in web-animation.",
+          ProjectLink: "https://ritik7905.github.io/Employee_crud/",
+          codeLink: "https://github.com/ritik7905/Employee_crud"
         },
 
-      ],
-      HTML_CSS: [
-        {
-          imgUrl: images.about03,
-          title: "UI/UX",
-          description: "I am a good in UI/UX.",
-          ProjectLink: "",
-          codeLink: ""
-        },
-        {
-          imgUrl: images.about04,
-          title: "Web Animation",
-          description: "I am a good in web-animation.",
-          ProjectLink: "",
-          codeLink: ""
-        },
       ],
     }
   ]
@@ -164,37 +162,6 @@ const Work = () => {
         <TabPane tab="Javascript" key="3">
           <div className="app__work-portfolio">
             {work[0].JavaScript.map((works, index) => {
-              return (
-                <div className="app__work-item app__flex" key={index}>
-                  <div className="app__work-img app__flex">
-                    <img src={works.imgUrl} alt="Work__image.." />
-                    <div className="app__work-overlay">
-                      <div className="app__work-links app__flex">
-                        <a href={works.ProjectLink} target="_blank" rel="noreferrer">
-                          <div className="app__work-hover app__flex">
-                            <AiFillEye />
-                          </div>
-                        </a>
-                        <a href={works.codeLink} target="_blank" rel="noreferrer">
-                          <div className="app__work-hover app__flex">
-                            <AiFillGithub />
-                          </div>
-                        </a>
-                      </div>
-                    </div>
-                  </div>
-                  <div className="app__work-content app__flex">
-                    <h4 className='bold-text text'>{works.title}</h4>
-                    <p className="p-text text">{works.description}</p>
-                  </div>
-                </div>
-              )
-            })}
-          </div>
-        </TabPane>
-        <TabPane tab="HTML/CSS" key="5">
-          <div className="app__work-portfolio">
-            {work[0].HTML_CSS.map((works, index) => {
               return (
                 <div className="app__work-item app__flex" key={index}>
                   <div className="app__work-img app__flex">

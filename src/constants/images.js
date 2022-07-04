@@ -34,5 +34,10 @@ import bolt from '../assets/bolt.png';
 import nb from '../assets/nb.png';
 import skype from '../assets/skype.png';
 import spotify from '../assets/spotify.png';
+import agency from "../assets/agency.jpg"
+import calculator from "../assets/tip calculator.jpg"
+import toddler from "../assets/toddler.jpg"
+import CRUD from "../assets/CRUD.jpg"
+import auth_crud from "../assets/auth_crud.jpg"
 
-export default { email, mobile, api, cpp, css, figma, flutter, git, graphql, html, javascript, mu5, node, python, react, redux, sass, typescript, vue, about01, about02, about03, about04, profile, circle, logo, adidas, amazon, asus, bolt, nb, skype, spotify };
+export default {auth_crud,CRUD,toddler,calculator,agency, email, mobile, api, cpp, css, figma, flutter, git, graphql, html, javascript, mu5, node, python, react, redux, sass, typescript, vue, about01, about02, about03, about04, profile, circle, logo, adidas, amazon, asus, bolt, nb, skype, spotify };
