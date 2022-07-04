@@ -30,7 +30,7 @@ const Footer = () => {
     setLoading(true)
   }
   return (
-    <div className='app__footer'>
+    <div className='app__footer' id='contacts'>
       <h2 className='head-text'>Take a coffee & chat with me</h2>
 
       <div className="app__footer-cards">

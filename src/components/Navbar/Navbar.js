@@ -7,6 +7,7 @@ import "./style.scss"
 const Navbar = () => {
     const NavLists = ['home', 'about', 'work', 'skills', 'contacts'];
     const [toggle, setToggle] = useState(false)
+    const [active, setActive] = useState(true)
 
     return (
         <nav className='app__navbar'>
@@ -25,19 +26,19 @@ const Navbar = () => {
             </ul>
             <div className="app_navbar-menu">
                 <HiMenuAlt4 onClick={() => { setToggle(!toggle) }} />
-                        <div className= {`sidebar ${toggle? "active": "" }`}>
-                            <HiX onClick={() => { setToggle(false) }} />
-                            <ul>
-                                {NavLists.map((item) => {
-                                    return (
-                                        <li key={item}>
-                                            <a href={`#${item}`} onClick={() => { setToggle(false) }}>{item}</a>
-                                        </li>
-                                    )
-                                })}
-                            </ul>
-                        </div>
-           
+                <div className={`sidebar ${toggle ? "active" : ""}`}>
+                    <HiX onClick={() => { setToggle(false) }} />
+                    <ul>
+                        {NavLists.map((item) => {
+                            return (
+                                <li key={item}>
+                                    <a href={`#${item}`}   onClick={() => { setToggle(false) }}>{item}</a>
+                                </li>
+                            )
+                        })}
+                    </ul>
+                </div>
+
 
             </div>
         </nav>

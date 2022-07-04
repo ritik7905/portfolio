@@ -8,8 +8,6 @@ const { TabPane } = Tabs;
 
 const Work = () => {
   const work = [
-
-
     {
       ALL: [
         {
@@ -31,7 +29,7 @@ const Work = () => {
           title: "Kids Toddler",
           description: "I am a good in UI/UX.",
           ProjectLink: "https://kidstoddler.netlify.app",
-          codeLink: ""
+          codeLink: "https://github.com/ritik7905/kids_toddler"
         },
         {
           imgUrl: images.calculator,
@@ -72,7 +70,7 @@ const Work = () => {
           title: "Kids Toddler",
           description: "I am a good in UI/UX.",
           ProjectLink: "https://kidstoddler.netlify.app",
-          codeLink: ""
+          codeLink: "https://github.com/ritik7905/kids_toddler"
         },
         {
           imgUrl: images.calculator,
@@ -94,7 +92,7 @@ const Work = () => {
   ]
   console.log(work[0].ALL);
   return (
-    <>
+    <div id='work'>
       <h2 className='head-text'> My Creative<span> Portfolio</span> Section</h2>
       <Tabs defaultActiveKey="1" centered className='app__portfolio-filters'>
         <TabPane tab="All" key="1">
@@ -191,7 +189,7 @@ const Work = () => {
           </div>
         </TabPane>
       </Tabs>
-    </>
+    </div>
   )
 }
 

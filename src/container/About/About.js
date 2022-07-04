@@ -31,7 +31,7 @@ const About = () => {
   ]
 
   return (
-    <div>
+    <div id='about'>
       <h2 className='head-text'>
         I know that
         <span> Good Development</span>
