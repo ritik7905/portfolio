@@ -45,7 +45,7 @@ const Testimonial = () => {
     <div className="app__testimonials" >
       <h2 className='head-text'>Testimonials</h2>
       <div className="app__testimonial-content app__flex">
-        <Swiper navigation={true} pagination={{
+        <Swiper navigation={true} loop={true} pagination={{
           dynamicBullets: true,
         }} modules={[Navigation, Pagination]} className="mySwiper">
           {slideData.map((item) => {

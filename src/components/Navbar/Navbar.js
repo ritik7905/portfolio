@@ -7,7 +7,6 @@ import "./style.scss"
 const Navbar = () => {
     const NavLists = ['home', 'about', 'work', 'skills', 'contacts'];
     const [toggle, setToggle] = useState(false)
-    const [active, setActive] = useState(true)
 
     return (
         <nav className='app__navbar'>
@@ -32,7 +31,7 @@ const Navbar = () => {
                         {NavLists.map((item) => {
                             return (
                                 <li key={item}>
-                                    <a href={`#${item}`}   onClick={() => { setToggle(false) }}>{item}</a>
+                                    <a href={`#${item}`} onClick={() => { setToggle(false) }}>{item}</a>
                                 </li>
                             )
                         })}
