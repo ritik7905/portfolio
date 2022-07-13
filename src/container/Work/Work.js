@@ -45,6 +45,13 @@ const Work = () => {
           ProjectLink: "https://ritik7905.github.io/Employee_crud/",
           codeLink: "https://github.com/ritik7905/Employee_crud"
         },
+        {
+          imgUrl: images.study_center ,
+          title: "Study Center",
+          description: "Made for students",
+          ProjectLink: "https://study-center-kappa.vercel.app/",
+          codeLink: "https://github.com/ritik7905/study_center"
+        },
 
       ],
       React_Js: [
@@ -85,6 +92,13 @@ const Work = () => {
           description: "I am a good in web-animation.",
           ProjectLink: "https://ritik7905.github.io/Employee_crud/",
           codeLink: "https://github.com/ritik7905/Employee_crud"
+        },
+        {
+          imgUrl: images.study_center ,
+          title: "Study Center",
+          description: "Made for students",
+          ProjectLink: "https://study-center-kappa.vercel.app/",
+          codeLink: "https://github.com/ritik7905/study_center"
         },
 
       ],
