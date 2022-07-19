@@ -43,7 +43,7 @@ const Footer = () => {
           <a href="tel:(+91) 9599567905" className='p-text'>(+91) 9599567905</a>
         </div>
       </div>
-      {!isFormSubmitted ?
+      {/* {!isFormSubmitted ?
         <div className="app__footer-form app__flex">
           <div className="app__flex">
             <input type="text" className='p-text' placeholder='Your Name' name='name' value={input.name} onChange={changeHandler} />
@@ -59,7 +59,7 @@ const Footer = () => {
           <button type='button' className='p-text' onClick={handleSubmit}>{loading ? "Sending" : "Send Message"}</button>
 
         </div>
-        : <div className='p-text'>Thank you</div>}
+        : <div className='p-text'>Thank you</div>} */}
 
     </div>
   )
