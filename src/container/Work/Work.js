@@ -13,42 +13,42 @@ const Work = () => {
         {
           imgUrl: images.agency,
           title: "Agency",
-          description: "I am a good developer.",
+          description: "Converted XD file into HTML.",
           ProjectLink: "https://heroagency.netlify.app/",
           codeLink: "https://github.com/ritik7905/firstWeb",
         },
         {
           imgUrl: images.auth_crud,
           title: "AUTH & CRUD",
-          description: "I am a good developer.",
+          description: "Here, User can create and login accouunt and create blogs..",
           ProjectLink: "https://ononeclick-85d25.web.app/login",
           codeLink: "https://github.com/ritik7905/onOneClick",
         },
         {
           imgUrl: images.toddler,
           title: "Kids Toddler",
-          description: "I am a good in UI/UX.",
+          description: "This is made for childrens, where childrens can learn alphabets & Counting..",
           ProjectLink: "https://kidstoddler.netlify.app",
           codeLink: "https://github.com/ritik7905/kids_toddler"
         },
         {
           imgUrl: images.calculator,
           title: "Tip Calculator",
-          description: "I am a good in web-animation.",
+          description: "This is being made for restaurants in order to give tips for waiters.",
           ProjectLink: "https://ritik7905.github.io/tip_calculator/",
           codeLink: "https://github.com/ritik7905/tip_calculator/tree/master"
         },
         {
           imgUrl: images.CRUD,
           title: "Employee CRUD",
-          description: "I am a good in web-animation.",
+          description: "Application to add new emloyees and delete existing employees.",
           ProjectLink: "https://ritik7905.github.io/Employee_crud/",
           codeLink: "https://github.com/ritik7905/Employee_crud"
         },
         {
           imgUrl: images.study_center ,
           title: "Study Center",
-          description: "Made for students",
+          description: "Made for students to study.",
           ProjectLink: "https://study-center-kappa.vercel.app/",
           codeLink: "https://github.com/ritik7905/study_center"
         },
@@ -58,14 +58,14 @@ const Work = () => {
         {
           imgUrl: images.agency,
           title: "Agency",
-          description: "I am a good developer.",
+          description: "Converted XD file into HTML.",
           ProjectLink: "https://heroagency.netlify.app/",
           codeLink: "https://github.com/ritik7905/firstWeb",
         },
         {
           imgUrl: images.auth_crud,
           title: "AUTH & CRUD",
-          description: "I am a good developer.",
+          description: "Here, User can create and login accouunt and create blogs..",
           ProjectLink: "https://ononeclick-85d25.web.app/login",
           codeLink: "https://github.com/ritik7905/onOneClick",
         },
@@ -75,28 +75,28 @@ const Work = () => {
         {
           imgUrl: images.toddler,
           title: "Kids Toddler",
-          description: "I am a good in UI/UX.",
+          description: "This is made for childrens, where childrens can learn alphabets & Counting..",
           ProjectLink: "https://kidstoddler.netlify.app",
           codeLink: "https://github.com/ritik7905/kids_toddler"
         },
         {
           imgUrl: images.calculator,
           title: "Tip Calculator",
-          description: "I am a good in web-animation.",
+          description: "This is being made for restaurants in order to give tips for waiters.",
           ProjectLink: "https://ritik7905.github.io/tip_calculator/",
           codeLink: "https://github.com/ritik7905/tip_calculator/tree/master"
         },
         {
           imgUrl: images.CRUD,
           title: "Employee CRUD",
-          description: "I am a good in web-animation.",
+          description: "Application to add new emloyees and delete existing employees.",
           ProjectLink: "https://ritik7905.github.io/Employee_crud/",
           codeLink: "https://github.com/ritik7905/Employee_crud"
         },
         {
           imgUrl: images.study_center ,
           title: "Study Center",
-          description: "Made for students",
+          description: "Made for students to study.",
           ProjectLink: "https://study-center-kappa.vercel.app/",
           codeLink: "https://github.com/ritik7905/study_center"
         },
