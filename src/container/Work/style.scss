@@ -3,6 +3,9 @@
 #work {
     background-color: aliceblue;
     padding: 80px;
+    @include mobile {
+        padding: 20px;
+    }
 }
 
 .head-text {
@@ -38,36 +41,40 @@
 }
 
 .app__work-portfolio {
-    width: 80%;
-    margin: 0 auto;
+    width: 100%;
     display: flex;
     justify-content: center;
     flex-wrap: wrap;
     position: relative;
-    .app__work-item {
-        flex-direction: column;
+    @include mobile {
+        width: 100%;
     }
 }
 
 .app__work-item {
     box-shadow: 0 5px 8px rgba(0, 0, 0, 0.1);
     margin: 20px;
+    flex-direction: column;
     border-radius: 10px;
-    max-width: 400px;
+    width: 400px;
+    @include mobile {
+        width: 270px;
+        height: 285px;
+    }
+    @include desktop {
+        width: 340px;
+        height: 290px;
+    }
 }
 
 .app__work-img {
     position: relative;
     overflow: hidden;
-    width: 170px;
-    height: 150px;
+    width: 90%;
+    height: 215px;
     flex-direction: column;
     margin: 20px;
     cursor: pointer;
-    @include desktop-lg {
-        width: 370px;
-        height: 250px;
-    }
     img {
         border-radius: 15px;
         position: absolute;
