@@ -23,6 +23,10 @@ const Navbar = () => {
                     )
                 })}
             </ul>
+            <div className="other-account">
+                <a href='https://github.com/ritik7905/' target="_blank" rel="noreferrer"><img src={images.github} alt="github" width="35" height="35" /></a>
+            </div>
+
             <div className="app_navbar-menu">
                 <HiMenuAlt4 onClick={() => { setToggle(!toggle) }} />
                 <div className={`sidebar ${toggle ? "active" : ""}`}>
@@ -37,8 +41,6 @@ const Navbar = () => {
                         })}
                     </ul>
                 </div>
-
-
             </div>
         </nav>
     )

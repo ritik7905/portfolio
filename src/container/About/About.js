@@ -1,5 +1,6 @@
-import React from 'react'
-
+import React, { useEffect } from 'react'
+import gsap from 'gsap'
+import { ScrollTrigger } from 'gsap/ScrollTrigger';
 import { motion } from 'framer-motion'
 import { images } from "../../constants"
 // styles
@@ -29,16 +30,36 @@ const About = () => {
     },
 
   ]
+  useEffect(() => {
+    gsap.registerPlugin(ScrollTrigger);
+    // const tl = gsap.timeline();
+    gsap.from(".about-animation-sec .revel-style", 1.5, {
+      y: 200,
+      ease: "power4.out",
+      delay: 0.5,
+      skewY: 0,
+      stagger: {
+        amount: 0.3
+      },
+      scrollTrigger: {
+        trigger: '#about',
+        start: 'top center',
+        markers: false
+      },
+    })
+  }, [])
+
 
   return (
-    <div id='about'>
-      <h2 className='head-text'>
-        I know that
-        <span> Good Development</span>
-        <br />
-        means
-        <span> Good Business</span>
-      </h2>
+    <div id='about' className='about-section'>
+      <div className='about-animation-sec'>
+        <h2 className='head-text revel-style'>
+          I know that Good Development
+        </h2>
+        <h2 className='head-text revel-style'>
+          <span>means Good Business</span>
+        </h2>
+      </div>
       <div className="app__profiles">
         {abouts.map((about, index) => {
           return (

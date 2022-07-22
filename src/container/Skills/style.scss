@@ -3,7 +3,14 @@
     flex: 1;
     width: 100%;
     flex-direction: column;
-    padding-bottom: 90px;
+    min-height: 60vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    .head-text {
+        margin-bottom: 50px;
+    }
 }
 
 .app__skills-container {
@@ -13,6 +20,7 @@
         display: flex;
         justify-content: center;
         flex-wrap: wrap;
+        gap: 50px;
     }
     .app__skills-item {
         flex-direction: column;
@@ -21,17 +29,22 @@
             margin: 0;
             font-size: 18px;
             font-weight: 500;
+            margin-top: 10px;
         }
         .app__skills-icons {
-            width: 170px;
-            height: 170px;
+            width: 90px;
+            height: 90px;
             img {
                 width: 100%;
             }
-            @include desktop-lg {
-                width: 270px;
-                height: 270px;
-            }
         }
+    }
+
+    .lg {
+        width: 210px !important;
+    }
+
+    .sm {
+        width: 66px !important;
     }
 }

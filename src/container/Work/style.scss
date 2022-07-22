@@ -6,11 +6,12 @@
     @include mobile {
         padding: 20px;
     }
+
+    .head-text {
+        padding: 25px 0;
+    }
 }
 
-.head-text {
-    padding: 50px 0;
-}
 
 .app__portfolio-filters {
     .ant-tabs-nav::before {
@@ -25,19 +26,30 @@
     }
     .ant-tabs-tab-btn {
         color: #97a0ae;
+        font-size: 16px;
+        font-weight: 500;
+        padding: 0 10px;
     }
     .ant-tabs-tab-active {
         background-color: $secondary-color;
-        border-radius: 12px;
-        width: 100%;
-        padding: 10px;
+        border-radius: 5px;
+        min-width: 80px;
+        padding: 5px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+
         .ant-tabs-ink-bar {
-            border-bottom: 1px solid red;
+            border: none !important;
         }
         .ant-tabs-tab-btn {
             color: white !important;
         }
     }
+}
+
+.ant-tabs-ink-bar {
+    display: none;
 }
 
 .app__work-portfolio {
@@ -46,6 +58,9 @@
     justify-content: center;
     flex-wrap: wrap;
     position: relative;
+    gap: 40px;
+    margin-top: 30px;
+
     @include mobile {
         width: 100%;
     }
@@ -53,18 +68,11 @@
 
 .app__work-item {
     box-shadow: 0 5px 8px rgba(0, 0, 0, 0.1);
-    margin: 20px;
     flex-direction: column;
     border-radius: 10px;
-    width: 400px;
-    @include mobile {
-        width: 270px;
-        height: 285px;
-    }
-    @include desktop {
-        width: 340px;
-        height: 290px;
-    }
+    width: 350px;
+    background: $white-color;
+    padding-bottom: 20px;
 }
 
 .app__work-img {
@@ -74,9 +82,10 @@
     height: 215px;
     flex-direction: column;
     margin: 20px;
+    border: 1px solid #eee;
+    border-radius: 10px;
     cursor: pointer;
     img {
-        border-radius: 15px;
         position: absolute;
         width: 100%;
         height: 100%;

@@ -40,5 +40,7 @@ import toddler from "../assets/toddler.jpg"
 import CRUD from "../assets/CRUD.jpg"
 import auth_crud from "../assets/auth_crud.jpg"
 import study_center from "../assets/study_center.png"
+import github from "../assets/github.svg"
+import javascriptCircle from "../assets/js-circle.svg"
 
-export default { study_center, auth_crud, CRUD, toddler, calculator, agency, email, mobile, api, cpp, css, figma, flutter, git, graphql, html, javascript, mu5, node, python, react, redux, sass, typescript, vue, about01, about02, about03, about04, profile, circle, logo, adidas, amazon, asus, bolt, nb, skype, spotify };
+export default {javascriptCircle,github, study_center, auth_crud, CRUD, toddler, calculator, agency, email, mobile, api, cpp, css, figma, flutter, git, graphql, html, javascript, mu5, node, python, react, redux, sass, typescript, vue, about01, about02, about03, about04, profile, circle, logo, adidas, amazon, asus, bolt, nb, skype, spotify };
