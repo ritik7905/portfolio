@@ -37,7 +37,7 @@ const Skills = () => {
       name: "REDUX.JS"
     },
     {
-      icons: images.api,
+      icons: images.apiIcon,
       name: "API",
       iconStyle: "lg"
     },

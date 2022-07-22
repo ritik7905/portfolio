@@ -12,7 +12,7 @@ import javascript from '../assets/javascript.png';
 import mu5 from '../assets/mu5.png';
 import node from '../assets/node.png';
 import python from '../assets/python.png';
-import react from '../assets/react.png';
+import react from '../assets/react.svg';
 import redux from '../assets/redux.png';
 import sass from '../assets/sass.png';
 import typescript from '../assets/typescript.png';
@@ -42,5 +42,6 @@ import auth_crud from "../assets/auth_crud.jpg"
 import study_center from "../assets/study_center.png"
 import github from "../assets/github.svg"
 import javascriptCircle from "../assets/js-circle.svg"
+import apiIcon from "../assets/apiIcon.svg"
 
-export default {javascriptCircle,github, study_center, auth_crud, CRUD, toddler, calculator, agency, email, mobile, api, cpp, css, figma, flutter, git, graphql, html, javascript, mu5, node, python, react, redux, sass, typescript, vue, about01, about02, about03, about04, profile, circle, logo, adidas, amazon, asus, bolt, nb, skype, spotify };
+export default {apiIcon,javascriptCircle,github, study_center, auth_crud, CRUD, toddler, calculator, agency, email, mobile, api, cpp, css, figma, flutter, git, graphql, html, javascript, mu5, node, python, react, redux, sass, typescript, vue, about01, about02, about03, about04, profile, circle, logo, adidas, amazon, asus, bolt, nb, skype, spotify };
